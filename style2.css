@@ -1,0 +1,56 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  width: 500px;
+  height: 500px;
+  border-radius: 10px;
+  background-color: cadetblue;
+}
+.box {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: brown;
+}
+.container:hover .box {
+  animation-name: myanime;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+.container:hover .box:nth-child(2) {
+animation-delay: .1s;
+}
+.container:hover .box:nth-child(3) {
+animation-delay: .2s;
+}
+.container:hover .box:nth-child(4) {
+animation-delay: .3s;
+}
+@keyframes myanime {
+  /* from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(200px);
+  } */
+
+  0%{
+    transform: translateX(0) ;
+  }
+  50%{
+    transform: translateX(400px);
+  }
+  100%{
+    transform:translateX(0);
+  }
+}
+
